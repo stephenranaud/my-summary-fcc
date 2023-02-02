@@ -1,0 +1,262 @@
+---
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title="Build a Survey Form">
+  <div class="container-form">
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+
+    <p id="description">
+      Thank you for taking the time to help us improve the platform
+    </p>
+
+    <form id="survey-form" action="" aria-label="Form main">
+      <div class="group-control">
+        <label id="name-label" for="name">Name</label>
+        <input
+          class="control-base"
+          placeholder="Enter your name"
+          required
+          type="text"
+          id="name"
+        />
+      </div>
+
+      <div class="group-control">
+        <label id="email-label" for="email">Email</label>
+        <input
+          class="control-base"
+          placeholder="Enter your Email"
+          required
+          type="email"
+          id="email"
+        />
+      </div>
+
+      <div class="group-control">
+        <label id="number-label" for="number">Age</label>
+        <input
+          class="control-base"
+          placeholder="Age"
+          type="number"
+          id="number"
+          min="18"
+          max="70"
+          aria-valuemin="18"
+          aria-valuemax="70"
+          aria-errormessage="Enter a number"
+        />
+      </div>
+
+      <div class="group-control">
+        <label for="pet-select"
+          >Which option best describes your current role?</label
+        >
+
+        <select class="control-base" id="dropdown">
+          <option value="Select current role">Select current role</option>
+          <option value="Student">Student</option>
+          <option value="Full Time Job">Full Time Job</option>
+          <option value="FulTime Learner">FulTime Learner</option>
+          <option value="Prefer not to say">Prefer not to say</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="group-control">
+        <label>Would you recommend freeCodeCamp to a friend?</label>
+
+        <div>
+          <input
+            type="radio"
+            id="definitely"
+            name="friends"
+            value="definitely"
+          />
+          <label for="definitely">Definitely</label>
+        </div>
+
+        <div>
+          <input type="radio" id="maybe" name="friends" value="maybe" />
+          <label for="maybe">Maybe</label>
+        </div>
+
+        <div>
+          <input type="radio" id="not-sure" name="friends" value="not-sure" />
+          <label for="not-sure">Not sure</label>
+        </div>
+      </div>
+
+      <div class="group-control">
+        <label for="pet-select"
+          >What is your favorite feature of freeCodeCamp?</label
+        >
+
+        <select class="control-base" id="dropdown">
+          <option value="Select an option">Select an option</option>
+          <option value="Challenges">Challenges</option>
+          <option value="Projects">Projects</option>
+          <option value="Community">Community</option>
+          <option value="Opensource">Opensource</option>
+        </select>
+      </div>
+
+      <div class="group-control">
+        <legend
+          >What would you like to see improved? (Check all that apply)</legend
+        >
+        <div>
+          <input type="checkbox" value="value" id="improved" name="improved" />
+          <label for="improved">Front-end Projects</label>
+        </div>
+
+        <div>
+          <input type="checkbox" value="value" id="improved" name="improved" />
+          <label for="improved">Back-end Projects</label>
+        </div>
+
+        <div>
+          <input type="checkbox" value="value" id="improved" name="improved" />
+          <label for="improved">Data Visualization</label>
+        </div>
+
+        <div>
+          <input type="checkbox" value="value" id="improved" name="improved" />
+          <label for="improved">Challenges</label>
+        </div>
+
+        <div>
+          <input type="checkbox" value="value" id="improved" name="improved" />
+          <label for="improved">Open Source Community</label>
+        </div>
+
+        <div>
+          <input type="checkbox" value="value" id="improved" name="improved" />
+          <label for="improved">Gitter help rooms</label>
+        </div>
+
+        <div>
+          <input type="checkbox" value="value" id="improved" name="improved" />
+          <label for="improved">Videos</label>
+        </div>
+
+        <div>
+          <input type="checkbox" value="value" id="improved" name="improved" />
+          <label for="improved">City Meetups</label>
+        </div>
+
+        <div>
+          <input type="checkbox" value="value" id="improved" name="improved" />
+          <label for="improved">Wiki</label>
+        </div>
+
+        <div>
+          <input type="checkbox" value="value" id="improved" name="improved" />
+          <label for="improved">Forums</label>
+        </div>
+
+        <div>
+          <input type="checkbox" value="value" id="improved" name="improved" />
+          <label for="improved">Additional Courses</label>
+        </div>
+      </div>
+
+      <div class="group-control">
+        <label for="">Any comments or suggestions?</label>
+        <textarea
+          id="comments"
+          class="textarea-control"
+          placeholder="Enter your comment here..."
+        >
+        </textarea>
+      </div>
+
+      <button id="submit" class="btn-submit" type="submit">Submit</button>
+    </form>
+  </div>
+</Layout>
+
+<style>
+  :root {
+    --color-white: #f3f3f3;
+    --color-darkblue: #1b1b32;
+    --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+    --color-green: #37af65;
+  }
+
+  body {
+    color: var(--color-white);
+  }
+
+  button {
+    border: none;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--color-darkblue);
+    background-image: linear-gradient(
+        115deg,
+        rgba(58, 58, 158, 0.8),
+        rgba(136, 136, 206, 0.7)
+      ),
+      url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .container-form {
+    max-width: 720px;
+    margin: auto;
+  }
+
+  #survey-form {
+    padding: 2.5rem;
+    background-color: var(--color-darkblue-alpha);
+    border-radius: 5px;
+  }
+
+  .group-control {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+
+  .group-control label {
+    margin-bottom: 0.5rem;
+  }
+
+  .control-base {
+    display: block;
+    width: 100%;
+    height: 2.375rem;
+    padding: 0.375rem 0.75rem;
+    color: #495057;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  .textarea-control {
+    min-height: 120px;
+    width: 100%;
+    padding: 0.625rem;
+    resize: vertical;
+  }
+  .btn-submit {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--color-green);
+    color: inherit;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+</style>

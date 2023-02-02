@@ -1,0 +1,46 @@
+<div id="shape1" class="shape-mosaic-trapezoid">
+  <div class="shape-mosaic-trapezoid__container">
+    <div class="shape-mosaic-trapezoid__first part"></div>
+    <div class="shape-mosaic-trapezoid__second part"></div>
+    <div class="shape-mosaic-trapezoid__third part"></div>
+  </div>
+</div>
+
+<style>
+  .shape-mosaic-trapezoid {
+    position: absolute;
+    top: 0;
+    height: calc(178px + 7vmin);
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    z-index: -1;
+  }
+  .shape-mosaic-trapezoid__container {
+    position: relative;
+    height: 90%;
+  }
+
+  .part {
+    position: absolute;
+    height: 100%;
+    width: calc(1 / 3 * 100%);
+    background-color: var(--green);
+  }
+  .shape-mosaic-trapezoid__first {
+    clip-path: polygon(0 0, 100% 0, 100% 82%, 0% 100%);
+  }
+
+  .shape-mosaic-trapezoid__second {
+    background-color: var(--dark-green);
+    left: calc(1 / 3 * 100% - 1px);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 82%);
+  }
+
+  .shape-mosaic-trapezoid__third {
+    right: 0;
+    width: calc(1 / 3 * 100% + 1.2rem);
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+</style>

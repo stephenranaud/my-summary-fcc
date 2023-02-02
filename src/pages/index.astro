@@ -1,11 +1,133 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+
+import Card from "@components/Card.astro";
+const remoteImage = "https://via.placeholder.com/500";
 ---
 
 <Layout title="Bienvenue sur mon résumé freecodecamp">
-  <main>
-    
-  </main>
+  <main class="container">
+    <section class="about-section">
+      <h2>About</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere iure
+        voluptates, dignissimos quaerat, debitis dicta vero, consequatur
+        delectus velit possimus esse molestias autem eaque exercitationem. Natus
+        doloremque quae hic impedit.
+      </p>
 
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni tempora
+        tempore labore pariatur aspernatur corrupti minima sit nam quae quam
+        voluptatum, neque, facilis nulla distinctio modi optio doloremque cumque
+        vel? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+        tempora tempore labore pariatur aspernatur corrupti minima sit nam quae
+        quam voluptatum, neque, facilis nulla distinctio modi optio doloremque
+        cumque vel?
+      </p>
+    </section>
+    <section class="certificats-section">
+      <h2>Certificats</h2>
+
+      <div class="grid">
+        <a href="">
+          <Card
+            title="Responsive Web Design"
+            src="https://via.placeholder.com/500"
+          >
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo,
+            blanditiis quos. Cupiditate fuga consequatur ducimus quos, dolore
+            error, commodi et porro dolores eos sequi! Officiis doloremque
+            cupiditate vitae sed numquam.
+          </Card>
+        </a>
+
+        <a href="">
+          <Card
+            title="Front End Developer"
+            src="https://via.placeholder.com/500"
+          >
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo,
+            blanditiis quos. Cupiditate fuga consequatur ducimus quos, dolore
+            error, commodi et porro dolores eos sequi! Officiis doloremque
+            cupiditate vitae sed numquam.
+          </Card>
+        </a>
+
+        <a href="">
+          <Card
+            title="Back End Development and APIs"
+            src="https://via.placeholder.com/500"
+          >
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo,
+            blanditiis quos. Cupiditate fuga consequatur ducimus quos
+          </Card>
+        </a>
+
+        <a href="">
+          <Card
+            title="JavaScript Algorithms and Data Structures"
+            src="https://via.placeholder.com/500"
+          >
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo,
+            blanditiis quos. commodi et porro dolores eos sequi! Officiis
+            doloremque cupiditate vitae sed numquam.
+          </Card>
+        </a>
+      </div>
+
+      <section class="projects-section">
+        <h2>Projects</h2>
+
+        <div class="grid">
+          <a href="">
+            <Card
+              title="Projects | Responsive Web Design"
+              src="https://via.placeholder.com/500"
+              className="no-body"
+            />
+
+            <a href="">
+              <Card
+                title="Projects | Front End Developer"
+                src="https://via.placeholder.com/500"
+                className="no-body"
+              />
+            </a>
+
+            <a href="">
+              <Card
+                title="Projects | Back End Development and APIs"
+                src="https://via.placeholder.com/500"
+                className="no-body"
+              />
+            </a>
+
+            <a href="">
+              <Card
+                title="Projects | JavaScript Algorithms and Data Structures"
+                src="https://via.placeholder.com/500"
+                className="no-body"
+              />
+            </a>
+          </a>
+        </div>
+      </section>
+    </section>
+
+    <style>
+      section {
+        padding-top: 2.5rem;
+        padding-bottom: 2rem;
+      }
+      section a {
+        text-decoration: none;
+        color: var(--white);
+      }
+
+      section h2 {
+        font-size: var(--fs-3);
+      }
+    </style>
+  </main>
 </Layout>

@@ -1,0 +1,78 @@
+---
+---
+
+<nav class="nav-main flex-row">
+  <div id="logo">Logo</div>
+
+  <div class="nav-main__right">
+    <ul class="nav-main__list">
+      <li><a href="#">Certificats</a></li>
+      <li><a href="#">Projets</a></li>
+      <li><a href="#">A propos</a></li>
+    </ul>
+
+    <div class="nav-main__button-menu">IconMenu</div>
+  </div>
+</nav>
+
+<style>
+  .nav-main {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--navy);
+    padding: 1.5rem;
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-heading);
+  }
+
+  .nav-main__list {
+    position: absolute;
+    right: 4rem;
+    top: 4.5rem;
+    padding: 0rem 2rem;
+    padding-top: 2rem;
+    background-color: var(--dark-slate);
+    border-radius: var(--border-radius);
+  }
+
+  .nav-main__list > * {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav-main a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: var(--fs-0);
+  }
+
+  .nav-main__right {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    .nav-main {
+      position: relative;
+      color: var(--navy);
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-main__list {
+      position: static;
+      display: flex;
+      gap: 1.5rem;
+      padding: 0rem 2rem;
+      background-color: transparent;
+    }
+
+    .nav-main a {
+      color: var(--navy);
+    }
+  }
+</style>

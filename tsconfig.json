@@ -17,8 +17,11 @@
       "@models/*": [
         "src/models/*"
       ],
-      "@utils": [
-        "src/utils"
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
       ]
     },
     "jsx": "react-jsx",

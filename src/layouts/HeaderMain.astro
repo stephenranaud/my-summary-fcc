@@ -1,0 +1,38 @@
+---
+import ShapeMastHead from "@components/ShapeMastHead.astro";
+import Button from "@components/react/Buttons/Button";
+import NavigationMain from "./NavigationMain.astro";
+---
+
+<header class="header-main" aria-label="Header main">
+  <ShapeMastHead />
+  <NavigationMain />
+
+  <section class="hero-section">
+    <div class="container">
+      <h1>Hey, welcome to my <br />FreeCodeCamp summary</h1>
+
+      <p>
+        Want to develop skills as a developer ? <br /> Discover the <a
+          href="https://www.freecodecamp.org/news/freecodecamp-certifications/"
+          >FreeCodeCamp</a
+        > course with me.
+      </p>
+
+      <Button type="button">Contact</Button>
+    </div>
+  </section>
+</header>
+
+<style>
+  .hero-section {
+    padding-top: 10rem;
+    padding-bottom: 7rem;
+    position: relative;
+    z-index: -2;
+    background-color: var(--navy);
+  }
+  .hero-section p {
+    font-size: var(--fs-1);
+  }
+</style>

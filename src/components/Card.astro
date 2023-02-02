@@ -1,17 +1,71 @@
 ---
+import { Image } from "@astrojs/image/components";
+
 interface Props {
-  title: string | Element;
+  title: string;
   src: string;
-  content: Element;
+  className?: string;
 }
+
+const { title, className, src } = Astro.props;
 ---
 
-<article class="card">    
+<div class="card">
   <div class="card__heading">
-      <img src="" alt="">
-      <h3></h3>
+    <Image
+      src={src}
+      width={500}
+      height={200}
+      format={"jpg"}
+      aspectRatio={2.0}
+      alt={title}
+    />
   </div>
-  <div class="card__body">
+  <div class={`card__body ${className ? className : ""}`}>
+    <h3>{title}</h3>
 
+    <p>
+      <slot />
+    </p>
   </div>
-</article>
+</div>
+
+<style>
+  .card {
+    background-color: transparent;
+    max-width: 400px;
+    grid-auto-flow: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+  }
+
+  .card__heading {
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--dark-slate);
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+  }
+
+  .card__body h3 {
+    padding: 0;
+    margin: 0;
+  }
+
+  .card__body {
+    background-color: var(--green-tint);
+    padding: 1rem;
+    text-align: center;
+    flex: 1;
+  }
+
+  .card__body.no-body {
+    flex: 0;
+    background-color: transparent;
+    text-align: left;
+    padding: 0;
+    padding-top: 0.5rem;
+    color: var(--green);
+  }
+</style>
