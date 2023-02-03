@@ -5,4 +5,10 @@ button {
   text-transform: uppercase;
   font-weight: var(--fw-bold);
   color: var(--dark-navy);
+  font-size: var(--fs--1);
+}
+
+.btn--navy {
+  background-color: var(--navy);
+  color: var(--green);
 }

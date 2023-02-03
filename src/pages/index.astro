@@ -1,13 +1,17 @@
 ---
+import HeaderMain from "@layouts/HeaderMain.astro";
 import Layout from "../layouts/Layout.astro";
 
 import Card from "@components/Card.astro";
+import FooterMain from "@layouts/FooterMain.astro";
 const remoteImage = "https://via.placeholder.com/500";
 ---
 
 <Layout title="Bienvenue sur mon résumé freecodecamp">
+  <HeaderMain />
+
   <main class="container">
-    <section class="about-section">
+    <section id="about" class="about-section">
       <h2>About</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere iure
@@ -26,7 +30,7 @@ const remoteImage = "https://via.placeholder.com/500";
         cumque vel?
       </p>
     </section>
-    <section class="certificats-section">
+    <section id="certificats" class="certificats-section">
       <h2>Certificats</h2>
 
       <div class="grid">
@@ -76,7 +80,7 @@ const remoteImage = "https://via.placeholder.com/500";
         </a>
       </div>
 
-      <section class="projects-section">
+      <section id="projects" class="projects-section">
         <h2>Projects</h2>
 
         <div class="grid">
@@ -130,4 +134,5 @@ const remoteImage = "https://via.placeholder.com/500";
       }
     </style>
   </main>
+  <FooterMain />
 </Layout>
