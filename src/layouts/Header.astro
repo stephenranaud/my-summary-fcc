@@ -1,0 +1,29 @@
+---
+import ShapeMastHead from "@components/ShapeMastHead.astro";
+import NavigationMain from "./NavigationMain.astro";
+
+type Props = {
+  className?: string;
+};
+
+const { className } = Astro.props;
+---
+
+<header class="header-main" aria-label="Header main">
+  <ShapeMastHead />
+  <NavigationMain />
+
+  <section class={`header-section ${className ? className : ""}`}>
+    <slot />
+  </section>
+</header>
+
+<style>
+  .header-section {
+    padding-top: 12rem;
+    padding-bottom: 7rem;
+    position: relative;
+    z-index: -2;
+    background-color: var(--navy);
+  }
+</style>

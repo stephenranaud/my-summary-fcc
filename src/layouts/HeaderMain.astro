@@ -9,17 +9,29 @@ import NavigationMain from "./NavigationMain.astro";
   <NavigationMain />
 
   <section class="hero-section">
-    <div class="container">
-      <h1>Hey, welcome to my <br />FreeCodeCamp summary</h1>
+    <div class="half container" style="align-items: center;">
+      <div class="half__item">
+        <div class="anim-overlay-left">
+          <h1>Hey, welcome to my <br />FreeCodeCamp summary</h1>
 
-      <p>
-        Want to develop skills as a developer ? <br /> Discover the <a
-          href="https://www.freecodecamp.org/news/freecodecamp-certifications/"
-          >FreeCodeCamp</a
-        > course with me.
-      </p>
-
-      <Button type="button">Contact</Button>
+          <p>
+            Want to develop skills as a developer ? <br /> Discover the <a
+              target="_blank"
+              href="https://www.freecodecamp.org/news/freecodecamp-certifications/"
+              >FreeCodeCamp</a
+            > course with me.
+          </p>
+          <a href="#footer-main">
+            <Button type="button">Contact</Button>
+          </a>
+        </div>
+      </div>
+      <div class="half__item">
+        <div class="hero-section__logo-container anim-overlay-left">
+          <p id="text-anim-rotate" class="hero-section__text"></p>
+          <div class="hero-section__logo-fcc"></div>
+        </div>
+      </div>
     </div>
   </section>
 </header>
@@ -28,11 +40,67 @@ import NavigationMain from "./NavigationMain.astro";
   .hero-section {
     padding-top: 12rem;
     padding-bottom: 7rem;
-    position: relative;
-    z-index: -2;
     background-color: var(--navy);
+    display: flex;
   }
+
   .hero-section p {
     font-size: var(--fs-1);
   }
+
+  .hero-section__logo-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-navy);
+    padding: max(2rem, min(18vmin, 5rem));
+  }
+
+  .hero-section__logo-fcc {
+    width: 200px;
+    height: 200px;
+    background-image: url("/src/assets/img/logo-fcc.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+  }
+
+  .hero-section__text {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    height: 10%;
+    width: 10%;
+    transition: none;
+  }
+
+  @media screen and (max-width: 400px) {
+    .hero-section__text {
+      top: -8%;
+      bottom: 0%;
+    }
+
+    .hero-section__logo-container {
+      padding: 2.5rem;
+      overflow: hidden;
+    }
+  }
 </style>
+
+<script>
+  const textAnimRotate = document.getElementById("text-anim-rotate");
+  const text = " FreeCodeCamp - Certifications";
+  if (!textAnimRotate)
+    throw new Error("Element with id text-anim-rotate not found");
+  textAnimRotate.insertAdjacentHTML(
+    "afterbegin",
+    text
+      .split("")
+      .map(
+        (char, index) =>
+          `<span style="transform: rotate(${index * 11}deg)">${char}</span>`
+      )
+      .join("")
+  );
+</script>

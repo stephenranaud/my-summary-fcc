@@ -1,4 +1,4 @@
-button {
+.btn {
   background-color: var(--green);
   padding: 0.8rem 2rem;
   border: none;
@@ -8,7 +8,11 @@ button {
   font-size: var(--fs--1);
 }
 
+.btn:hover {
+  background-color: var(--dark-green);
+  color: var(--white);
+}
 .btn--navy {
   background-color: var(--navy);
-  color: var(--green);
+  color: var(--dark-green);
 }

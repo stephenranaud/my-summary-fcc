@@ -4,10 +4,9 @@ import Layout from "../layouts/Layout.astro";
 
 import Card from "@components/Card.astro";
 import FooterMain from "@layouts/FooterMain.astro";
-const remoteImage = "https://via.placeholder.com/500";
 ---
 
-<Layout title="Bienvenue sur mon résumé freecodecamp">
+<Layout title="Welcome to my FreecCodeCamp summary">
   <HeaderMain />
 
   <main class="container">
@@ -34,57 +33,103 @@ const remoteImage = "https://via.placeholder.com/500";
       <h2>Certificats</h2>
 
       <div class="grid">
-        <a href="">
+        <div>
           <Card
             title="Responsive Web Design"
             src="https://via.placeholder.com/500"
           >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo,
-            blanditiis quos. Cupiditate fuga consequatur ducimus quos, dolore
-            error, commodi et porro dolores eos sequi! Officiis doloremque
-            cupiditate vitae sed numquam.
-          </Card>
-        </a>
+            <p>
+              In this Responsive Web Design Certification, you'll learn the
+              languages that developers use to build webpages: HTML (Hypertext
+              Markup Language) for content, and CSS (Cascading Style Sheets) for
+              design.
+            </p>
 
-        <a href="">
+            <p>
+              First, you'll build a cat photo app to learn the basics of HTML
+              and CSS. Later, you'll learn modern techniques like CSS variables
+              by building a penguin, and best practices for accessibility by
+              building a quiz site.
+            </p>
+          </Card>
+        </div>
+
+        <div>
           <Card
             title="Front End Developer"
             src="https://via.placeholder.com/500"
           >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo,
-            blanditiis quos. Cupiditate fuga consequatur ducimus quos, dolore
-            error, commodi et porro dolores eos sequi! Officiis doloremque
-            cupiditate vitae sed numquam.
-          </Card>
-        </a>
+            <p>
+              Now that you're familiar with HTML, CSS, and JavaScript, level up
+              your skills by learning some of the most popular front end
+              libraries in the industry.
+            </p>
 
-        <a href="">
+            <p>
+              Later, you'll build a shopping cart and other applications to
+              learn how to create powerful Single Page Applications (SPAs) with
+              React and Redux.
+            </p>
+          </Card>
+        </div>
+
+        <div>
           <Card
             title="Back End Development and APIs"
             src="https://via.placeholder.com/500"
           >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo,
-            blanditiis quos. Cupiditate fuga consequatur ducimus quos
-          </Card>
-        </a>
+            <p>
+              Until this point, you've only used JavaScript on the front end to
+              add interactivity to a page, solve algorithm challenges, or build
+              an SPA. But JavaScript can also be used on the back end, or
+              server, to build entire web applications.
+            </p>
 
-        <a href="">
+            <p>
+              Today, one of the popular ways to build applications is through
+              microservices, which are small, modular applications that work
+              together to form a larger whole.
+            </p>
+
+            <p>
+              Today, one of the popular ways to build applications is through
+              microservices, which are small, modular applications that work
+              together to form a larger whole.
+            </p>
+          </Card>
+        </div>
+
+        <div>
           <Card
             title="JavaScript Algorithms and Data Structures"
             src="https://via.placeholder.com/500"
           >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo,
-            blanditiis quos. commodi et porro dolores eos sequi! Officiis
-            doloremque cupiditate vitae sed numquam.
+            <p>
+              Certification, you'll learn the fundamentals of JavaScript
+              including variables, arrays, objects, loops, and functions.
+            </p>
+
+            <p>
+              Once you have the fundamentals down, you'll apply that knowledge
+              by creating algorithms to manipulate strings, factorialize
+              numbers, and even calculate the orbit of the International Space
+              Station.
+            </p>
+
+            <p>
+              Along the way, you'll also learn two important programming styles
+              or paradigms: Object Oriented Programming (OOP) and Functional
+              Programming (FP).
+            </p>
           </Card>
-        </a>
+        </div>
       </div>
 
       <section id="projects" class="projects-section">
         <h2>Projects</h2>
 
         <div class="grid">
-          <a href="">
+          <a href="/projects/responsive-web-design/">
             <Card
               title="Projects | Responsive Web Design"
               src="https://via.placeholder.com/500"
