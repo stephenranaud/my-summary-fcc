@@ -1,0 +1,19 @@
+---
+type Props = {
+  src?: string;
+  target?: "_blank" | "_parent" | "_self" | "_top";
+};
+
+const { src, target } = Astro.props as Props;
+---
+
+<a class="link" href={src} target={target}>
+  <slot />
+</a>
+
+<style>
+  a.link {
+    text-decoration: none;
+    color: var(--white);
+  }
+</style>

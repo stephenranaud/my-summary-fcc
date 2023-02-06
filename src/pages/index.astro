@@ -4,180 +4,176 @@ import Layout from "../layouts/Layout.astro";
 
 import Card from "@components/Card.astro";
 import FooterMain from "@layouts/FooterMain.astro";
+import Link from "@components/Link.astro";
 ---
 
 <Layout title="Welcome to my FreecCodeCamp summary">
   <HeaderMain />
+  <main>
+    <div class="container">
+      <section id="about" class="about-section">
+        <h2>About</h2>
+        <p style="color: #00ffff; font-size: 2rem">
+          Merci de patienter, je recherche actuellement mon identité, j'ai
+          besoin de mettre de l'ordre, pour rester cohérent | Salle d'attente.
+        </p>
 
-  <main class="container">
-    <section id="about" class="about-section">
-      <h2>About</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere iure
-        voluptates, dignissimos quaerat, debitis dicta vero, consequatur
-        delectus velit possimus esse molestias autem eaque exercitationem. Natus
-        doloremque quae hic impedit.
-      </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+          tempora tempore labore pariatur aspernatur corrupti minima sit nam
+          quae quam voluptatum, neque, facilis nulla distinctio modi optio
+          doloremque cumque vel? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Magni tempora tempore labore pariatur aspernatur
+          corrupti minima sit nam quae quam voluptatum, neque, facilis nulla
+          distinctio modi optio doloremque cumque vel?
+        </p>
+      </section>
+    </div>
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni tempora
-        tempore labore pariatur aspernatur corrupti minima sit nam quae quam
-        voluptatum, neque, facilis nulla distinctio modi optio doloremque cumque
-        vel? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
-        tempora tempore labore pariatur aspernatur corrupti minima sit nam quae
-        quam voluptatum, neque, facilis nulla distinctio modi optio doloremque
-        cumque vel?
-      </p>
-    </section>
     <section id="certificats" class="certificats-section">
-      <h2>Certificats</h2>
+      <div class="container">
+        <h2>Certificats</h2>
 
-      <div class="grid">
-        <div>
-          <Card
-            title="Responsive Web Design"
-            src="https://via.placeholder.com/500"
-          >
-            <p>
-              In this Responsive Web Design Certification, you'll learn the
-              languages that developers use to build webpages: HTML (Hypertext
-              Markup Language) for content, and CSS (Cascading Style Sheets) for
-              design.
-            </p>
+        <div class="grid">
+          <div>
+            <Card
+              title="Responsive Web Design"
+              src="https://via.placeholder.com/500"
+            >
+              <p>
+                In this Responsive Web Design Certification, you'll learn the
+                languages that developers use to build webpages: HTML (Hypertext
+                Markup Language) for content, and CSS (Cascading Style Sheets)
+                for design.
+              </p>
 
-            <p>
-              First, you'll build a cat photo app to learn the basics of HTML
-              and CSS. Later, you'll learn modern techniques like CSS variables
-              by building a penguin, and best practices for accessibility by
-              building a quiz site.
-            </p>
-          </Card>
-        </div>
+              <p>
+                First, you'll build a cat photo app to learn the basics of HTML
+                and CSS. Later, you'll learn modern techniques like CSS
+                variables by building a penguin, and best practices for
+                accessibility by building a quiz site.
+              </p>
+            </Card>
+          </div>
 
-        <div>
-          <Card
-            title="Front End Developer"
-            src="https://via.placeholder.com/500"
-          >
-            <p>
-              Now that you're familiar with HTML, CSS, and JavaScript, level up
-              your skills by learning some of the most popular front end
-              libraries in the industry.
-            </p>
+          <div>
+            <Card
+              title="Front End Developer"
+              src="https://via.placeholder.com/500"
+            >
+              <p>
+                Now that you're familiar with HTML, CSS, and JavaScript, level
+                up your skills by learning some of the most popular front end
+                libraries in the industry.
+              </p>
 
-            <p>
-              Later, you'll build a shopping cart and other applications to
-              learn how to create powerful Single Page Applications (SPAs) with
-              React and Redux.
-            </p>
-          </Card>
-        </div>
+              <p>
+                Later, you'll build a shopping cart and other applications to
+                learn how to create powerful Single Page Applications (SPAs)
+                with React and Redux.
+              </p>
+            </Card>
+          </div>
 
-        <div>
-          <Card
-            title="Back End Development and APIs"
-            src="https://via.placeholder.com/500"
-          >
-            <p>
-              Until this point, you've only used JavaScript on the front end to
-              add interactivity to a page, solve algorithm challenges, or build
-              an SPA. But JavaScript can also be used on the back end, or
-              server, to build entire web applications.
-            </p>
+          <div>
+            <Card
+              title="Back End Development and APIs"
+              src="https://via.placeholder.com/500"
+            >
+              <p>
+                Until this point, you've only used JavaScript on the front end
+                to add interactivity to a page, solve algorithm challenges, or
+                build an SPA. But JavaScript can also be used on the back end,
+                or server, to build entire web applications.
+              </p>
 
-            <p>
-              Today, one of the popular ways to build applications is through
-              microservices, which are small, modular applications that work
-              together to form a larger whole.
-            </p>
+              <p>
+                Today, one of the popular ways to build applications is through
+                microservices, which are small, modular applications that work
+                together to form a larger whole.
+              </p>
 
-            <p>
-              Today, one of the popular ways to build applications is through
-              microservices, which are small, modular applications that work
-              together to form a larger whole.
-            </p>
-          </Card>
-        </div>
+              <p>
+                Today, one of the popular ways to build applications is through
+                microservices, which are small, modular applications that work
+                together to form a larger whole.
+              </p>
+            </Card>
+          </div>
 
-        <div>
-          <Card
-            title="JavaScript Algorithms and Data Structures"
-            src="https://via.placeholder.com/500"
-          >
-            <p>
-              Certification, you'll learn the fundamentals of JavaScript
-              including variables, arrays, objects, loops, and functions.
-            </p>
+          <div>
+            <Card
+              title="JavaScript Algorithms and Data Structures"
+              src="https://via.placeholder.com/500"
+            >
+              <p>
+                Certification, you'll learn the fundamentals of JavaScript
+                including variables, arrays, objects, loops, and functions.
+              </p>
 
-            <p>
-              Once you have the fundamentals down, you'll apply that knowledge
-              by creating algorithms to manipulate strings, factorialize
-              numbers, and even calculate the orbit of the International Space
-              Station.
-            </p>
+              <p>
+                Once you have the fundamentals down, you'll apply that knowledge
+                by creating algorithms to manipulate strings, factorialize
+                numbers, and even calculate the orbit of the International Space
+                Station.
+              </p>
 
-            <p>
-              Along the way, you'll also learn two important programming styles
-              or paradigms: Object Oriented Programming (OOP) and Functional
-              Programming (FP).
-            </p>
-          </Card>
+              <p>
+                Along the way, you'll also learn two important programming
+                styles or paradigms: Object Oriented Programming (OOP) and
+                Functional Programming (FP).
+              </p>
+            </Card>
+          </div>
         </div>
       </div>
+    </section>
 
+    <div class="container">
       <section id="projects" class="projects-section">
         <h2>Projects</h2>
 
         <div class="grid">
-          <a href="/projects/responsive-web-design/">
+          <Link src={"/projects/responsive-web-design/"}>
             <Card
               title="Projects | Responsive Web Design"
               src="https://via.placeholder.com/500"
               className="no-body"
             />
+          </Link>
 
-            <a href="">
-              <Card
-                title="Projects | Front End Developer"
-                src="https://via.placeholder.com/500"
-                className="no-body"
-              />
-            </a>
+          <Link>
+            <Card
+              title="Projects | Front End Developer"
+              src="https://via.placeholder.com/500"
+              className="no-body"
+            />
+          </Link>
 
-            <a href="">
-              <Card
-                title="Projects | Back End Development and APIs"
-                src="https://via.placeholder.com/500"
-                className="no-body"
-              />
-            </a>
+          <Link>
+            <Card
+              title="Projects | Back End Development and APIs"
+              src="https://via.placeholder.com/500"
+              className="no-body"
+            />
+          </Link>
 
-            <a href="">
-              <Card
-                title="Projects | JavaScript Algorithms and Data Structures"
-                src="https://via.placeholder.com/500"
-                className="no-body"
-              />
-            </a>
-          </a>
+          <Link>
+            <Card
+              title="Projects | JavaScript Algorithms and Data Structures"
+              src="https://via.placeholder.com/500"
+              className="no-body"
+            />
+          </Link>
         </div>
       </section>
-    </section>
-
-    <style>
-      section {
-        padding-top: 2.5rem;
-        padding-bottom: 2rem;
-      }
-      section a {
-        text-decoration: none;
-        color: var(--white);
-      }
-
-      section h2 {
-        font-size: var(--fs-3);
-      }
-    </style>
+    </div>
   </main>
   <FooterMain />
 </Layout>
+
+<style>
+  #certificats {
+    background-color: var(--navy);
+  }
+</style>

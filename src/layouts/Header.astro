@@ -13,17 +13,20 @@ const { className } = Astro.props;
   <ShapeMastHead />
   <NavigationMain />
 
-  <section class={`header-section ${className ? className : ""}`}>
+  <section class={`hero-section ${className ? className : ""}`}>
     <slot />
   </section>
 </header>
 
 <style>
-  .header-section {
+  .hero-section {
     padding-top: 12rem;
     padding-bottom: 7rem;
-    position: relative;
-    z-index: -2;
     background-color: var(--navy);
+  }
+
+  .hero-section p {
+    font-size: var(--fs-1);
+    color: red;
   }
 </style>

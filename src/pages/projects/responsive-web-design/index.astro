@@ -1,8 +1,125 @@
 ---
+import Card from "@components/Card.astro";
+import Link from "@components/Link.astro";
+import FooterMain from "@layouts/FooterMain.astro";
 import Header from "@layouts/Header.astro";
 import Layout from "@layouts/Layout.astro";
+import LayoutProjects from "@layouts/LayoutProjects.astro";
+
+const routePrefix = "/projects/responsive-web-design";
 ---
 
 <Layout title="Responsive Web Design">
-  <Header><div class="container">Hello</div></Header>
+  <Header className={"heading-projects"}>
+    <section class="container">
+      <h1>Responsive Web Design</h1>
+      <p>
+        In this Responsive Web Design Certification, you'll learn the languages
+        that developers use to build webpages: HTML (Hypertext Markup Language)
+        for content, and CSS (Cascading Style Sheets) for design.
+      </p>
+
+      <p>
+        First, you'll build a cat photo app to learn the basics of HTML and CSS.
+        Later, you'll learn modern techniques like CSS variables by building a
+        penguin, and best practices for accessibility by building a quiz site.
+      </p>
+    </section>
+  </Header>
+
+  <LayoutProjects>
+    <section class="projects">
+      <div class="grid">
+        <Link src={`${routePrefix}/survey-form`} target="_blank">
+          <Card title="Survey Form" src="https://via.placeholder.com/500">
+            <p class="dislaymer">
+              This is one of the required projects to earn your certification.
+            </p>
+            <p>
+              For this project, you will build a survey form to collect data
+              from your users.
+            </p>
+          </Card>
+        </Link>
+
+        <Link src={`${routePrefix}/tribute-page`} target="_blank">
+          <Card title="Tribute Page" src="https://via.placeholder.com/500">
+            <p class="dislaymer">
+              This is one of the required projects to earn your certification.
+            </p>
+            <p>
+              For this project, you will build a tribute page for a subject of
+              your choosing, fictional or real.
+            </p>
+          </Card>
+        </Link>
+
+        <Link
+          src={`${routePrefix}/technical-documentation-page`}
+          target="_blank"
+        >
+          <Card
+            title="Technical Documentation Page"
+            src="https://via.placeholder.com/500"
+          >
+            <p class="dislaymer">
+              This is one of the required projects to earn your certification.
+            </p>
+            <p>
+              For this project, you will build a technical documentation page to
+              serve as instruction or reference for a topic.
+            </p>
+          </Card>
+        </Link>
+
+        <Link src={`${routePrefix}/product-landing-page`} target="_blank">
+          <Card
+            title="Product Landing Page"
+            src="https://via.placeholder.com/500"
+          >
+            <p class="dislaymer">
+              This is one of the required projects to earn your certification.
+            </p>
+            <p>
+              For this project, you will build a product landing page to market
+              a product of your choice.
+            </p>
+          </Card>
+        </Link>
+
+        <Link src={`${routePrefix}/personal-portfolio`} target="_blank">
+          <Card
+            title="Personal Portfolio Webpage"
+            src="https://via.placeholder.com/500"
+          >
+            <p class="dislaymer">
+              This is one of the required projects to earn your certification.
+            </p>
+            <p>
+              For this project, you will build your own personal portfolio page.
+            </p>
+          </Card>
+        </Link>
+      </div>
+    </section>
+  </LayoutProjects>
+
+  <FooterMain />
 </Layout>
+
+<style>
+  .heading-projects p {
+    font-size: var(--fs-1);
+  }
+
+  .dislaymer {
+    color: var(--dark-navy);
+    display: block;
+    border-left: 10px solid var(--cyan);
+    padding: 0.5rem 0.7rem;
+    background-color: var(--green-tint);
+    border-radius: var(--border-radius);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-0);
+  }
+</style>

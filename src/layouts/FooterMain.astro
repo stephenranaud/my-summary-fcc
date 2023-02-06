@@ -1,4 +1,5 @@
 ---
+const date = new Date();
 ---
 
 <footer id="footer-main" class="footer-main" aria-label="Footer main">
@@ -8,7 +9,9 @@
     <a href="">DevTo</a>
   </section>
 
-  <div class="by-sairussdev">Made with love by SairussDev ❤️</div>
+  <div class="by-sairussdev">
+    &copy;{date.getFullYear()} | Made with love by SairussDev❤️
+  </div>
 </footer>
 
 <style>
@@ -17,6 +20,7 @@
     background-color: var(--dark-navy);
     position: relative;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: space-around;
@@ -24,5 +28,6 @@
 
   .contacts {
     gap: 1rem;
+    padding: 1rem;
   }
 </style>
