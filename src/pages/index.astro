@@ -59,7 +59,7 @@ import Link from "@components/Link.astro";
           <div>
             <Card
               title="Responsive Web Design"
-              src="https://via.placeholder.com/500"
+              src="/src/assets/img/responsive-category.svg"
             >
               <p>
                 In this Responsive Web Design Certification, you'll learn the
@@ -80,7 +80,7 @@ import Link from "@components/Link.astro";
           <div>
             <Card
               title="Front End Developer"
-              src="https://via.placeholder.com/500"
+              src="/src/assets/img/frontend-category.svg"
             >
               <p>
                 Now that you're familiar with HTML, CSS, and JavaScript, level
@@ -99,7 +99,7 @@ import Link from "@components/Link.astro";
           <div>
             <Card
               title="Back End Development and APIs"
-              src="https://via.placeholder.com/500"
+              src="/src/assets/img/backend-category.svg"
             >
               <p>
                 Until this point, you've only used JavaScript on the front end
@@ -125,7 +125,7 @@ import Link from "@components/Link.astro";
           <div>
             <Card
               title="JavaScript Algorithms and Data Structures"
-              src="https://via.placeholder.com/500"
+              src="/src/assets/img/algorithms-category.svg"
             >
               <p>
                 Certification, you'll learn the fundamentals of JavaScript
@@ -155,10 +155,18 @@ import Link from "@components/Link.astro";
         <h2>Projects</h2>
 
         <div class="grid">
+          <Link>
+            <Card
+              title="Projects | JavaScript Algorithms and Data Structures"
+              src="/src/assets/img/algorithms-category.svg"
+              className="no-body"
+            />
+          </Link>
+
           <Link src={"/projects/responsive-web-design/"}>
             <Card
               title="Projects | Responsive Web Design"
-              src="https://via.placeholder.com/500"
+              src="/src/assets/img/responsive-category.svg"
               className="no-body"
             />
           </Link>
@@ -166,7 +174,7 @@ import Link from "@components/Link.astro";
           <Link>
             <Card
               title="Projects | Front End Developer"
-              src="https://via.placeholder.com/500"
+              src="/src/assets/img/frontend-category.svg"
               className="no-body"
             />
           </Link>
@@ -174,15 +182,7 @@ import Link from "@components/Link.astro";
           <Link>
             <Card
               title="Projects | Back End Development and APIs"
-              src="https://via.placeholder.com/500"
-              className="no-body"
-            />
-          </Link>
-
-          <Link>
-            <Card
-              title="Projects | JavaScript Algorithms and Data Structures"
-              src="https://via.placeholder.com/500"
+              src="/src/assets/img/backend-category.svg"
               className="no-body"
             />
           </Link>

@@ -11,15 +11,19 @@ const { title, className, src } = Astro.props;
 ---
 
 <div class="card">
-  <div class="card__heading">
-    <Image
-      src={src}
-      width={500}
-      height={200}
-      format={"jpg"}
-      aspectRatio={2.0}
-      alt={title}
-    />
+  <div class="card__heading" style={`background-image: url(${src})`}>
+    <!-- {
+      format !== "svg" && (
+        <Image
+          src={src}
+          width={500}
+          height={200}
+          format={format}
+          aspectRatio={2.0}
+          alt={title}
+        />
+      )
+    } -->
   </div>
   <div class={`card__body ${className ? className : ""}`}>
     <h3>{title}</h3>
@@ -47,6 +51,17 @@ const { title, className, src } = Astro.props;
     border: 2px solid var(--cyan);
     overflow: hidden;
     margin-bottom: 0.5rem;
+    background-color: var(--green-tint);
+    max-width: 500px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 95% 90%;
+    transition: var(--transition);
+  }
+
+  .card__heading:hover {
+    box-shadow: 1px 1px 2px 3px var(--light-navy);
   }
 
   .card__body h3 {
@@ -55,7 +70,7 @@ const { title, className, src } = Astro.props;
   }
 
   .card__body {
-    background-color: var(--green-tint);
+    background-color: var(--light-navy);
     padding: 1rem;
     flex: 1;
   }
