@@ -113,6 +113,7 @@ const { title } = Astro.props;
   h5,
   h6 {
     font-family: var(--ff-heading);
+    margin-bottom: 4rem;
   }
 
   h1 {
@@ -179,6 +180,10 @@ const { title } = Astro.props;
     flex-direction: column;
   }
 
+  .flex-row-reverse {
+    flex-direction: row-reverse !important;
+  }
+
   .pl-1 {
     padding-left: 1.5rem;
   }
@@ -197,7 +202,7 @@ const { title } = Astro.props;
   .half {
     display: flex;
     flex-flow: row wrap;
-    gap: 2rem;
+    gap: 2.5rem;
   }
 
   .half__item {
@@ -225,16 +230,33 @@ const { title } = Astro.props;
     margin-right: auto;
   }
 
+  .background-style {
+    background-color: var(--green);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+  }
+
+  .background-style > * {
+    position: relative;
+    bottom: 4rem;
+  }
+
   /**
   *Class animations
    */
 
-  .anim-overlay-left {
+  .overlay-left {
     position: relative;
   }
 
-  .anim-overlay-left::before,
-  .anim-overlay-left::after {
+  .overlay-left--green.overlay-left::before,
+  .overlay-left--green.overlay-left::after {
+    background-color: var(--green);
+    border-radius: var(--border-radius-lg);
+  }
+
+  .overlay-left::before,
+  .overlay-left::after {
     content: "";
     display: block;
     position: absolute;
@@ -251,6 +273,14 @@ const { title } = Astro.props;
 
   .anim-overlay-left::after {
     animation: slide-left-cover 1.2s var(--left-after-cubic) forwards;
+  }
+
+  .slide-up {
+    bottom: 0;
+  }
+  .anim-slide-up {
+    bottom: 0;
+    animation: slide-up 700ms ease-in-out 400ms forwards;
   }
 
   /**
@@ -325,6 +355,15 @@ const { title } = Astro.props;
   @keyframes rotateInfinity {
     to {
       transform: rotate(360deg);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      bottom: 0;
+    }
+    to {
+      bottom: 4rem;
     }
   }
 </style>

@@ -4,7 +4,7 @@ import Layout from "@layouts/Layout.astro";
 
 <Layout title="Tribute page">
   <main id="main">
-    <header>
+    <header class="container">
       <h1 id="title">Dr Norman Borlaug</h1>
       <p>The man who saved a billion lives</p>
     </header>
@@ -14,15 +14,15 @@ import Layout from "@layouts/Layout.astro";
         src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute-page-main-image.jpg"
         alt=""
       />
-      <div id="img-caption">
+      <div id="img-caption" class="container">
         Dr. Norman Borlaug, third from the left, trains biologists in Mexico on
         how to increase wheat yields - part of his life-long war on hunger.
       </div>
     </div>
 
-    <h2>Here's a time line of Dr. Borlaug's life:</h2>
+    <h2 class="container">Here's a time line of Dr. Borlaug's life:</h2>
 
-    <ul>
+    <ul class="container">
       <li><strong>1914</strong> - Born in Cresco, Iowa</li>
       <li>
         <strong>1933</strong> - Leaves his family's farm to attend the University
@@ -93,11 +93,12 @@ import Layout from "@layouts/Layout.astro";
       <li><strong>2009</strong> - dies at the age of 95.</li>
     </ul>
 
-    <p id="tribute-info">
+    <p id="tribute-info" class="container">
       f you have time, you should read more about this incredible human being on
       his
     </p>
     <a
+      class="container"
       id="tribute-link"
       href="https://en.wikipedia.org/wiki/Norman_Borlaug"
       target="_blank">Wikipedia entry.</a
@@ -124,5 +125,10 @@ import Layout from "@layouts/Layout.astro";
 
   ul {
     list-style: disc;
+  }
+
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 </style>

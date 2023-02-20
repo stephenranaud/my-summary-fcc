@@ -13,41 +13,54 @@ import Link from "@components/Link.astro";
     <div class="container">
       <section id="about" class="about-section">
         <h2>About</h2>
-        <p style="color: #00ffff; font-size: 2rem">
-          Merci de patienter, je recherche actuellement mon identité, j'ai
-          besoin de mettre de l'ordre, pour rester cohérent | Salle d'attente.
-        </p>
 
-        <p>
-          So I remember when I started coding, I always wondered how to become a
-          developer. So I made the mistake of giving up computer development.
-        </p>
+        <div class="half flex-row-reverse">
+          <div class="half__item">
+            <p>
+              So I remember when I started coding, I always wondered how to
+              become a developer. So I made the mistake of giving up computer
+              development.
+            </p>
 
-        <p>
-          This project aims to cover the path of the developer, every year
-          articles and videos are made on the subject, I decided to go further
-          in the process, following the steps that are often recommended, so I
-          will do it for you.
-        </p>
+            <p>
+              This project aims to cover the path of the developer, every year
+              articles and videos are made on the subject, I decided to go
+              further in the process, following the steps that are often
+              recommended, so I will do it for you.
+            </p>
 
-        <p>
-          Generally I come across <a
-            target="_blank"
-            href="https://www.freecodecamp.org/news/freecodecamp-certifications/"
-            >FreeCodeCamp</a
-          > resources, on the networks we see people saying they got a job after
-          this certification so we'll go through it together through articles and
-          this side site which will recap <a
-            target="_blank"
-            href="https://www.freecodecamp.org/news/freecodecamp-certifications/"
-            >FreeCodeCamp</a
-          > projects but also interviews of developers on the subject and recommendations.
-        </p>
+            <p>
+              Generally I come across <a
+                target="_blank"
+                href="https://www.freecodecamp.org/news/freecodecamp-certifications/"
+                >FreeCodeCamp</a
+              > resources, on the networks we see people saying they got a job after
+              this certification so we'll go through it together through articles
+              and this side site which will recap <a
+                target="_blank"
+                href="https://www.freecodecamp.org/news/freecodecamp-certifications/"
+                >FreeCodeCamp</a
+              > projects but also interviews of developers on the subject and recommendations.
+            </p>
 
-        <p>
-          This project for me is also an opportunity to promote my content and
-          to take the next step personally.
-        </p>
+            <p>
+              This project for me is also an opportunity to promote my content
+              and to take the next step personally.
+            </p>
+          </div>
+
+          <div
+            id="wrapper-illustration-career"
+            class="half__item background-style overlay-left overlay-left--green"
+          >
+            <img
+              id="illustration-career"
+              src="/src/assets/img/career.svg"
+              alt="Illustration career"
+              class="slide-up"
+            />
+          </div>
+        </div>
       </section>
     </div>
 
@@ -198,3 +211,39 @@ import Link from "@components/Link.astro";
     background-color: var(--navy);
   }
 </style>
+
+<script>
+  const illustrationCareer = document.getElementById("illustration-career");
+  const wrapperIllustrationCareer = document.getElementById(
+    "wrapper-illustration-career"
+  );
+
+  const intersectionObservable = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entrie) => {
+        if (entrie.isIntersecting) {
+          const target = entrie.target;
+          console.log(target);
+          if (target.classList.contains("overlay-left")) {
+            target.classList.add("anim-overlay-left");
+            intersectionObservable.observe(target);
+          }
+
+          if (target.classList.contains("slide-up")) {
+            target.classList.add("anim-slide-up");
+            intersectionObservable.observe(target);
+          }
+        }
+      });
+    },
+    {
+      rootMargin: "42px",
+    }
+  );
+
+  if (!illustrationCareer) throw new Error("No target element");
+  intersectionObservable.observe(illustrationCareer);
+
+  if (!wrapperIllustrationCareer) throw new Error("No target element");
+  intersectionObservable.observe(wrapperIllustrationCareer);
+</script>
