@@ -60,8 +60,6 @@ const { title } = Astro.props;
 
     --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
     --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    --ham-before: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
-    --ham-before-active: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
     --left-after-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
 
@@ -280,7 +278,7 @@ const { title } = Astro.props;
   }
   .anim-slide-up {
     bottom: 0;
-    animation: slide-up 700ms ease-in-out 400ms forwards;
+    animation: slide-up 550ms var(--easing) 800ms forwards;
   }
 
   /**
