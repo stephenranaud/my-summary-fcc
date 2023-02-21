@@ -68,6 +68,27 @@ import Link from "@components/Link.astro";
       <div class="container">
         <h2>Certificats</h2>
 
+        <p>
+          J'ai fait ces 4 certfications à fin de las série vous aurez des avis
+          professionnels de develppeurs professionnels et de RH que j'ai ou je
+          vais interviewé vous aurez mon avis également.
+        </p>
+
+        <p>
+          J'ai essayé d'avoir une estimation de temps pour vous vis à vis des
+          débutants, je peux pas me baser sur le temps que cela m'a pris comme
+          base parce que j'ai déja ces compétences.
+        </p>
+
+        <p>
+          Je peux faire une certifications ou deux en 1 weekend par exemple
+          beaucoup ont trouvé la certications algorithmes et structures de
+          données difficile. Nous y reviendrons.
+        </p>
+
+        <br />
+        <br />
+
         <div class="grid">
           <div>
             <Card
@@ -166,6 +187,9 @@ import Link from "@components/Link.astro";
     <div class="container">
       <section id="projects" class="projects-section">
         <h2>Projects</h2>
+        <p>Every week, a new freecodecamp certification.</p>
+        <br />
+        <br />
 
         <div class="grid">
           <Link>
@@ -223,7 +247,7 @@ import Link from "@components/Link.astro";
       entries.forEach((entrie) => {
         if (entrie.isIntersecting) {
           const target = entrie.target;
-          console.log(target);
+
           if (target.classList.contains("overlay-left")) {
             target.classList.add("anim-overlay-left");
             intersectionObservable.observe(target);
@@ -237,7 +261,7 @@ import Link from "@components/Link.astro";
       });
     },
     {
-      rootMargin: "42px",
+      rootMargin: "18px",
     }
   );
 
